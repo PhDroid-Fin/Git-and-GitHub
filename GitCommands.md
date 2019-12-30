@@ -44,4 +44,5 @@
     * Recover the deleted file to both the working tree and the staging area: `git checkout <first 5 characters behind 'commit'> -- <filename>`
 
 ### Ignore files unwanted for tracking
-  * Open ignore file: `atom .gitignore`
+  * Open ignore file: `atom/vi(Ctrl+c, type :wq to exit) .gitignore`
+  * Type in unwanted file names or directories (using wildcards): `*.suffix`, `logs/` (all files under directory `logs`)
