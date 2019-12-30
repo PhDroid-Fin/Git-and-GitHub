@@ -21,9 +21,9 @@
     * `git config --local user.email "your@email.com"`
     * `git config --local user.name "alias"`
 
-### Git commands
+### Use Git to track changes
   * Initialization: `git init`
-  * Statuses of both the working tree and (most importantly) the staging area: `git status `. (Any changes to the tracked files, and any untracked files that are newly created)
+  * Current status: `git status `. (Show any untracked/uncommitted changes)
   * Add files to the staging area (track the files): `git add <filename>/ S* (files with the same prefix 'S') /*.txt(all files with txt suffix) / . (all files)`
     * This will create a unique SHA-1 hash with the first 7 characters shown below the command
   * Add new commits to the history: `git commit -m "your message"
@@ -31,3 +31,8 @@
   * Show the commit graph information: `git log `
   * Show the difference of the tracked file between the working tree and the staging area: `git diff`. (what we are about to stage)
   * Show the difference of the tracked file between the staging area and the history: `git diff --staged`. (what we are about to commit)
+  * Remove tracked files from both the working tree and the staging area: `git rm <filename>`
+  * Show the commit message file: `git commit`
+
+### Use Git to undo a working tree change
+  * 
