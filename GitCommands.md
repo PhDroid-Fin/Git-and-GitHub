@@ -11,6 +11,7 @@
   * Change directory: `cd <directory>`
   * Open files using atom: `atom <filename>`
   * List the files in the current directory: `ls`
+  * Copy files: `cp <filename> <new filename>`
 
 ### Configure Git username and email
   * Configure username: `git config --global user.name "PhDroid-Fin"`
@@ -22,9 +23,11 @@
 
 ### Git commands
   * Initialization: `git init`
-  * Show current status in the working tree and the staging area: `git status `
-  * Add files to the staging area (track the files): `git add <filename>/ *.txt(all files with txt suffix) / . (all files)`
+  * Statuses of both the working tree and (most importantly) the staging area: `git status `. (Any changes to the tracked files, and any untracked files that are newly created)
+  * Add files to the staging area (track the files): `git add <filename>/ S* (files with the same prefix 'S') /*.txt(all files with txt suffix) / . (all files)`
     * This will create a unique SHA-1 hash with the first 7 characters shown below the command
   * Add new commits to the history: `git commit -m "your message"
 `
   * Show the commit graph information: `git log `
+  * Show the difference of the tracked file between the working tree and the staging area: `git diff`. (what we are about to stage)
+  * Show the difference of the tracked file between the staging area and the history: `git diff --staged`. (what we are about to commit)
