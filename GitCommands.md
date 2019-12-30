@@ -12,6 +12,7 @@
   * Open files using atom: `atom <filename>`
   * List the files in the current directory: `ls`
   * Copy files: `cp <filename> <new filename>`
+  * Create files: `touch <filename.suffix>`
 
 ### Configure Git username and email
   * Configure username: `git config --global user.name "PhDroid-Fin"`
@@ -37,4 +38,10 @@
 
 ### Use Git to undo your commands
   * Undo changes in the working tree: `git checkout -- <filename>`
-  * Undo staging of files: ``
+  * Undo staging of files: `git reset HEAD <filename>`
+  * Get back the deleted files using `git rm`:
+    * Check the log: `git log -- <filename>`
+    * Recover the deleted file to both the working tree and the staging area: `git checkout <first 5 characters behind 'commit'> -- <filename>`
+
+### Ignore files unwanted for tracking
+  * Open ignore file: `atom .gitignore`
