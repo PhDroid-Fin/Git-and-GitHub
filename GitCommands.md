@@ -33,6 +33,8 @@
   * Show the difference of the tracked file between the staging area and the history: `git diff --staged`. (what we are about to commit)
   * Remove tracked files from both the working tree and the staging area: `git rm <filename>`
   * Show the commit message file: `git commit`
+    * Use `Ctrl + c`, then type `:wq` to exit.
 
-### Use Git to undo a working tree change
-  * 
+### Use Git to undo your commands
+  * Undo changes in the working tree: `git checkout -- <filename>`
+  * Undo staging of files: ``
