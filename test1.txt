@@ -3,5 +3,6 @@
 <<<<<<< HEAD
 # This is branch 1 text
 =======
-# This is branch 2 text
+# This is branch 1 text
 >>>>>>> branch2
+here I hav some more information
