@@ -88,4 +88,18 @@
   * When the HEAD points to a commit in the history, it is called a detached HEAD
     * Find the commit: `git log` to see the commit hash
     * Point to the commit: `git checkout <7 character>`
+    * Check the HEAD: `graph`
     * Quit the detached HEAD: `git checkout <branch name>`
+    * Create a new branch from the detached HEAD: `git branch <new Branching>`
+
+### Git stash
+  * When switching to another branch but don't want to commit the changes in the staging area.
+  * For example,  you want to checkout to another branch before make the commit. But you don't want to lose it.
+  * `git checkout <branch name>` return message "error: Your local changes to the following files would be overwritten by checkout. Please commit your changes or stash them before you switch branches."
+  * Solution: use `git stash` to store the changes in staging area for a moment.
+  * When you come back, use `git stash list` to show the unsaved commits in time order (most recent with lowest number)
+  * `git stash list -p` to show the details
+  * Apply: `git stash apply`
+  * Apply and remove: `git stash pop`
+  * Add stash with a  message: `git stash save "<message>"`
+  * Remove stash: `git stash drop <stash_id>`; Remove all `git stash clear`
