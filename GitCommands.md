@@ -79,4 +79,12 @@
     * `<<<< HEAD`: HEAD pointer's content
     * `====`: equal sign showing content in comparison
     * `>>>> <branch>`: content in another branch
-  * Solution: delete `<<<< HEAD`, unwanted content and `>>>> <branch>`.
+  * Solution:
+    * delete `<<<< HEAD`, unwanted content and `>>>> <branch>`.
+    * Then delete the branch with conflicts
+
+### Detached HEAD
+  * Usually HEAD points to a branch which in turns points to a commit
+  * When the HEAD points to a commit in the history, it is called a detached HEAD
+    * Find the commit: `git log` to see the commit hash
+    * Point to the commit: `git checkout <7 character>`
