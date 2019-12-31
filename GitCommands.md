@@ -57,16 +57,20 @@
   * Check all branches: `git branch`
   * Checkout and work on branches: `git checkout <branch  name>`
   * Stage and commit at the same time: `git commit -a -m "<message>"`
-### Direct merge
+### "Fast-forward" merge
   * Merge master with branch1
     * master --> branch1
   * Show differences between two branches: `git diff <branch1>..<branch2>`
   * Move HEAD to the branch we want to update 'branch1': `git checkout <branch1>`
   * Merge the current branch 'branch1' with 'branch2': `git merge <branch2>`. This will move 'master' branch to where <branch name> is.
   * Show merged branches: `git branch --merged`
-### 3-way merge
+### 3-way merge (recursive strategy)
   * Merge branch1 with branch 2:
     * master --> branch1;
     * master --> branch2;
+    * The two branches changed different lines!!!
 ### Deleting branches
   * Delete branches that have been merged: `git branch -d <branch name>`
+### Merge conflicts
+  * This occurs when we try to merge two branches that changed the same lines
+  * Checkout and move to a new branch: `git checkout -b <branch name>`
