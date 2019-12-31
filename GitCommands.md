@@ -109,7 +109,8 @@
   * Download: Git Fetch and merge
   * Upload: Git Push
   * GitHub is a remote repository
-### Commands
+
+### GitHub operation
   * Origin: `origin` works as an alias by default
   * Retrieve a copy repo from GitHub (Clone): `git clone <the address copied from the repo>`
   * Setup the usernames: `git config --local user.name "<username>"`; `git config --local user.email "<email>"`
@@ -120,4 +121,16 @@
   * Update our origin: `git fetch origin`
   * When the origin is ahead of our local repo: `git merge origin/<branch name>`
   * Do git fetch and merge together: `git pull` (not recommended)
-  * Upload local repo to the origin: `git push`
+  * Upload local repo to the origin: `git push`; `git push origin <branch name>`
+
+### GitHub fork
+  * Create a GitHub fork - a copy of another user's (e.g. Betty) repo (no access to that repo)
+  * After create a GitHub fork, the user now can just clone it to the local repo
+  * Sync with the original repo: `git add remote <remote name (e.g. upstream)> "<Betty's repo address>"`
+  * Remove the remote: `git remote remove <remote name>`
+  * See updates on Betty's repo: `git fetch upstream`
+  * Update the local repo (master) to upstream: `git merge upstream/master`
+  * Update our remote fork: `git push origin/master`
+  * Show remote tracking branches: `git branch -r`
+  * Push local branch to the remote as a new one: `git push origin <local branch name>`
+  * Delete a remote branch: `git push origin --delete <branch name>`
