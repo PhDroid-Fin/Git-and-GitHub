@@ -75,3 +75,8 @@
   * This occurs when we try to merge two branches that changed the same lines
   * Checkout and move to a new branch: `git checkout -b <branch name>`
   * Abort the merge due to conflicts: `git merge --abort`
+  * Explanation on the conflicts:
+    * `<<<< HEAD`: HEAD pointer's content
+    * `====`: equal sign showing content in comparison
+    * `>>>> <branch>`: content in another branch
+  * Solution: delete `<<<< HEAD`, unwanted content and `>>>> <branch>`.
