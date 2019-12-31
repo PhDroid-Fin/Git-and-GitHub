@@ -1,6 +1,6 @@
 # Basic commands for Git and GitHub
 
-## Git
+## Basics
 ### Core concepts: 3 areas of a Git repository
   * Working Tree: current working space where we edit our files
   * Staging Area (Index): create snapshots of files of which the changes we want to document. Only the changes in the staging area are put in the next commit
@@ -13,6 +13,7 @@
   * List the files in the current directory: `ls`
   * Copy files: `cp <filename> <new filename>`
   * Create files: `touch <filename.suffix>`
+  * Show content of the file: `cat <filename>`
 
 ### Configure Git username and email
   * Configure username: `git config --global user.name "PhDroid-Fin"`
@@ -46,3 +47,26 @@
 ### Ignore files unwanted for tracking
   * Open ignore file: `atom/vi(Ctrl+c, type :wq to exit) .gitignore`
   * Type in unwanted file names or directories (using wildcards): `*.suffix`, `logs/` (all files under directory `logs`)
+
+## Branching and Merging
+### Branching
+  * HEAD: it is a HEAD pointer showing us which branch we are in, but not the commit; or it tells us which branch we have checked out
+  * Show a nice labeled commit path: `git log --all --decorate --oneline --graph`
+  * Define a shortcut for the above command: `alias <shortcut name>="<the long command>"`. e.g. `alias graph="git log --all --decorate --oneline --graph"`
+  * Create new branches: `git branch <branch name>`
+  * Check all branches: `git branch`
+  * Checkout and work on branches: `git checkout <branch  name>`
+  * Stage and commit at the same time: `git commit -a -m "<message>"`
+### Direct merge
+  * Merge master with branch1
+    * master --> branch1
+  * Show differences between two branches: `git diff <branch1>..<branch2>`
+  * Move HEAD to the branch we want to update 'branch1': `git checkout <branch1>`
+  * Merge the current branch 'branch1' with 'branch2': `git merge <branch2>`. This will move 'master' branch to where <branch name> is.
+  * Show merged branches: `git branch --merged`
+### 3-way merge
+  * Merge branch1 with branch 2:
+    * master --> branch1;
+    * master --> branch2;
+### Deleting branches
+  * Delete branches that have been merged: `git branch -d <branch name>`
