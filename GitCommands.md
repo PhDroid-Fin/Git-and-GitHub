@@ -103,3 +103,17 @@
   * Apply and remove: `git stash pop`
   * Add stash with a  message: `git stash save "<message>"`
   * Remove stash: `git stash drop <stash_id>`; Remove all `git stash clear`
+
+## Git - Remotes (GitHub)
+### Overview
+  * Download: Git Fetch and merge
+  * Upload: Git Push
+  * GitHub is a remote repository
+### Commands
+  * Origin: `origin` works as an alias by default
+  * Retrieve a copy repo from GitHub (Clone): `git clone <the address copied from the repo>`
+  * Setup the usernames: `git config --local user.name "<username>"`; `git config --local user.email "<email>"`
+  * Display our remotes: `git remote`: usually it's 'origin' by default
+  * Display full locations of our remotes: `git remote -v`
+  * Display how master branch looks at origin: `graph`; (HEAD -> master, origin/master) tells us our local repo is in sync with our remote named origin 
+  * Check out remote (detached HEAD): `git checkout origin/master`
