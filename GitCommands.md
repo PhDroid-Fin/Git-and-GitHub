@@ -88,3 +88,4 @@
   * When the HEAD points to a commit in the history, it is called a detached HEAD
     * Find the commit: `git log` to see the commit hash
     * Point to the commit: `git checkout <7 character>`
+    * Quit the detached HEAD: `git checkout <branch name>`
