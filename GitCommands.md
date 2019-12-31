@@ -115,5 +115,9 @@
   * Setup the usernames: `git config --local user.name "<username>"`; `git config --local user.email "<email>"`
   * Display our remotes: `git remote`: usually it's 'origin' by default
   * Display full locations of our remotes: `git remote -v`
-  * Display how master branch looks at origin: `graph`; (HEAD -> master, origin/master) tells us our local repo is in sync with our remote named origin 
+  * Display how master branch looks at origin: `graph`; (HEAD -> master, origin/master) tells us our local repo is in sync with our remote named origin
   * Check out remote (detached HEAD): `git checkout origin/master`
+  * Update our origin: `git fetch origin`
+  * When the origin is ahead of our local repo: `git merge origin/<branch name>`
+  * Do git fetch and merge together: `git pull` (not recommended)
+  * Upload local repo to the origin: `git push`
