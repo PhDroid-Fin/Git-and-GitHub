@@ -2,6 +2,7 @@
 # This is the original text
 <<<<<<< HEAD
 # This is branch 1 text
+here I have some new info
 =======
 # This is branch 2 text
 >>>>>>> branch2
