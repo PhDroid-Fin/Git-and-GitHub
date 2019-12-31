@@ -1,6 +1,7 @@
 ### Added SSH Key
 # This is the original text
 <<<<<<< HEAD
+Add one more thing here.
 # This is dev text
 here I have some new info
 =======
