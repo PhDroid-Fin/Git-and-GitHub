@@ -8,3 +8,4 @@ here I have some new info
 # This is branch 1 text
 >>>>>>> branch2
 here I hav some more information
+I add something new here.
