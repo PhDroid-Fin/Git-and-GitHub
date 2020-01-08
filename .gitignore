@@ -1,3 +1,5 @@
+# ignore files with the same suffix '.pyc'
 *.pyc
+# ignore files in the specified folders 'logs' and 'reference'
 logs/
 reference/

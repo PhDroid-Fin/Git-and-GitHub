@@ -30,6 +30,10 @@
     * This will create a unique SHA-1 hash with the first 7 characters shown below the command
   * Add new commits to the history: `git commit -m "your message"
 `
+  * Change the most recent commit message:
+    * Navigate to the repository.
+    * Amend the message of the latest pushed commit: `git commit --amend -m "New commit message."`
+    * Force push to update the history of the remote repository: `git push --force branch-name`
   * Show the commit graph information: `git log `
   * Show the difference of the tracked file between the working tree and the staging area: `git diff`. (what we are about to stage)
   * Show the difference of the tracked file between the staging area and the history: `git diff --staged`. (what we are about to commit)
@@ -123,11 +127,22 @@
   * Do git fetch and merge together: `git pull` (not recommended)
   * Upload local repo to the origin: `git push`; `git push origin <branch name>`
 
+### Link the local repo to GitHub: https://help.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line
+  * Create a new repository on GitHub. To avoid errors, **do not** *initialize the new repository with README, license, or `gitignore` files*. You can add these files after your project has been pushed to GitHub.
+  * Change the current directory
+  * Initialize the local directory: `git init`
+  * Add files and commit: `git add .`, `git commit -m "<msg>"`
+  * Copy the remote repository URL from GitHub
+  * Add the remote repo and check:
+    * add remote: `git remote add origin <URL>`
+    * check the remote: `git remote -v`
+  * Push the changes: `git push -u origin master` (`-u` means the default setting)
+
 ### GitHub fork
   * Create a GitHub fork - a copy of another user's (e.g. Betty) repo (no access to that repo)
   * After create a GitHub fork, the user now can just clone it to the local repo
   * Sync with the original repo: `git add remote <remote name (e.g. upstream)> "<Betty's repo address>"`
-  * Remove the remote: `git remote remove <remote name>`
+  * Remove the remote (unlink the remote): `git remote remove <remote name>`
   * See updates on Betty's repo: `git fetch upstream`
   * Update the local repo (master) to upstream: `git merge upstream/master`
   * Update our remote fork: `git push origin/master`
